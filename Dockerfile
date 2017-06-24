@@ -6,6 +6,7 @@ RUN apk --no-cache add --virtual build-deps \
       build-base \
       gettext-dev \
       git \
+      py-setuptools \
       py2-pip \
       python2-dev \
     && apk --no-cache add \
@@ -16,9 +17,7 @@ RUN apk --no-cache add --virtual build-deps \
       py2-requests \
       py2-urllib3 \
       python2 \
-    && pip install setuptools \
     && pip install git+https://github.com/linkcheck/linkchecker \
-    && pip uninstall -y setuptools \
     && apk del build-deps
 
 COPY linkcheckerrc /root/.linkchecker/linkcheckerrc
