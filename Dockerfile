@@ -17,7 +17,8 @@ RUN apk --no-cache add --virtual build-deps \
       py2-requests \
       py2-urllib3 \
       python2 \
-    && pip install git+https://github.com/linkcheck/linkchecker \
+##    && pip install git+https://github.com/linkcheck/linkchecker \
+      && pip install git+https://github.com/JAremko/linkchecker \
     && apk del build-deps
 
 COPY linkcheckerrc /root/.linkchecker/linkcheckerrc
