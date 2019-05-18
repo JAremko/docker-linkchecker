@@ -1,4 +1,4 @@
-### Docker image with latest https://github.com/linkcheck/linkchecker
+### Docker image for https://github.com/linkcheck/linkchecker
 
 #### Usage:
 ``` bash
