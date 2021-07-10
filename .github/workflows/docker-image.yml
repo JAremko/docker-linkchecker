@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest
+          tags: ghcr.io/JAremko/docker-linkchecker/linkchecker:latest
