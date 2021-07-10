@@ -7,16 +7,16 @@ RUN apk --no-cache add --virtual build-deps \
       gettext-dev \
       git \
       py-setuptools \
-      py2-pip \
-      python2-dev \
+      py-pip \
+      python3-dev \
     && apk --no-cache add \
       gettext \
-      py2-certifi \
-      py2-chardet \
-      py2-idna \
-      py2-requests \
-      py2-urllib3 \
-      python2 \
+      py3-certifi \
+      py3-chardet \
+      py3-idna \
+      py3-requests \
+      py3-urllib3 \
+      python3 \
 ##    && pip install git+https://github.com/linkcheck/linkchecker \
       && pip install git+https://github.com/JAremko/linkchecker \
     && apk del build-deps
