@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.10
 
 MAINTAINER JAremko <w3techplaygound@gmail.com>
 
@@ -6,17 +6,17 @@ RUN apk --no-cache add --virtual build-deps \
       build-base \
       gettext-dev \
       git \
-      py-setuptools \
+      py2-setuptools \
       py-pip \
-      python3-dev \
+      python2-dev \
     && apk --no-cache add \
       gettext \
-      py3-certifi \
-      py3-chardet \
-      py3-idna \
-      py3-requests \
-      py3-urllib3 \
-      python3 \
+      py2-certifi \
+      py2-chardet \
+      py2-idna \
+      py2-requests \
+      py2-urllib3 \
+      python2 \
 ##    && pip install git+https://github.com/linkcheck/linkchecker \
       && pip install git+https://github.com/JAremko/linkchecker \
     && apk del build-deps
@@ -24,4 +24,3 @@ RUN apk --no-cache add --virtual build-deps \
 COPY linkcheckerrc /root/.linkchecker/linkcheckerrc
 
 ENTRYPOINT ["linkchecker"]
-
